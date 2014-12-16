@@ -13,6 +13,9 @@ export default function startApp(attrs) {
     App = Application.create(attributes);
     App.setupForTesting();
     App.injectTestHelpers();
+    Router.reopen({
+    	location: 'none'
+    });
   });
 
   return App;
